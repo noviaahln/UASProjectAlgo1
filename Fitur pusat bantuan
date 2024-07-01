@@ -1,0 +1,117 @@
+def pusat_bantuan():
+    print("Selamat datang di pusat bantuan")
+    print('''
+    1. Bagaimana cara menggunakan fitur Konsultasi?
+    2. Apa metode pembayaran yang dapat saya gunakan?
+    3. Bagaimana cara membuat akun baru?
+    4. Bagaimana cara saya menyampaikan keluhan tentang aplikasi farmpro.mart ini?
+    5. Bagaimana saya bisa menghubungi layanan pelanggan?
+    ''')
+
+a = 1
+while a == 1:
+    a = 0
+    pusat_bantuan()
+    pilihan = input("Apa keluhanmu?>")
+    if pilihan.isdigit():
+        pilihan = int(pilihan)
+    else:
+        b = 1
+        while b == 1:
+            b = 0
+            inputan = input("Inputan salah, tekan enter untuk mengulang")
+            if inputan == "":
+                a = 1
+            else:
+                b = 1
+
+    if pilihan == 1:
+       print('''
+       Cara menggunakan fitur konsultasi :
+       1. Pilih fitur konsultasi
+       2. Pilih keluhan (Hama/Bibit)
+       3. Jika memilih hama, masukkan jenis hama apa yang menyerang lahan pertanian, lalu program akan memberikan rekomendasi produk pestisida secara otomatis
+       4. Jika memilih bibit, masukkan berapa derajat suhu daerah lahan dan juga lama waktu panen yang diharapkan. Program akan secara otomatis memberikan rekomendasi bibit yang sesuai dengan lahan dan lama waktu yang diinginkan pengguna
+      5. Produk rekomendasi dapat langsung dibeli oleh pengguna tanpa harus kembali ke fitur pembelian
+         ''')
+    elif pilihan == 2:
+        print("Program kami hanya menyediakan metode pembayaran cash on delivery")
+    elif pilihan == 3:
+        print('''
+        Cara membuat akun baru :
+        1. Pada tampilan awal, pilih registrasi
+        2. Masukkan username dan password baru
+        3. Akun berhasil dibuat
+        ''')
+    elif pilihan == 4:
+        print("Pada aplikasi farmpro.mart telah disediakan fitur masukan untuk pengguna menyampaikan kritik dan saran tentang program aplikasi farmpro.mart")
+    elif pilihan == 5:
+        print('''
+        Anda dapat menghubungi cp yang tertera dibawah ini : 
+        +6281234567890
+        ''')
+    else :
+        inputan = input("Inputan salah, tekan enter :")
+        if inputan == "":
+            a = 1
+        else:
+            b = 1
+            while b == 1:
+                b = 0
+                inputan = input("Inputan salah, tekan enter untuk mengulang")
+                if inputan == "":
+                    a = 1
+                else:
+                    b = 1
+
+print("Apakah ada keluhan lain?>")
+while True:
+    pilihan = input("ya/tidak")
+    if pilihan == "ya":
+        a = 1
+        while a == 1:
+            a = 0
+            pusat_bantuan()
+            pilihan = input("Apa keluhanmu?>")
+            if pilihan.isdigit():
+                pilihan = int(pilihan)
+            else:
+                b = 1
+                while b == 1:
+                    b = 0
+                    inputan = input("Inputan salah, tekan enter untuk mengulang")
+                    if inputan == "":
+                        a = 1
+                    else:
+                        b = 1
+    if pilihan == 1:
+       print('''
+       Cara menggunakan fitur konsultasi :
+        1. Pilih fitur konsultasi
+        2. Pilih keluhan (Hama/Bibit)
+        3. Jika memilih hama, masukkan jenis hama apa yang menyerang lahan pertanian, lalu program akan memberikan rekomendasi produk pestisida secara otomatis
+        4. Jika memilih bibit, masukkan berapa derajat suhu daerah lahan dan juga lama waktu panen yang diharapkan. Program akan secara otomatis memberikan rekomendasi bibit yang sesuai dengan lahan dan lama waktu yang diinginkan pengguna
+        5. Produk rekomendasi dapat langsung dibeli oleh pengguna tanpa harus kembali ke fitur pembelian
+        ''')
+    elif pilihan == 2:
+        print("Program kami hanya menyediakan metode pembayaran cash on delivery")
+    elif pilihan == 3:
+        print('''
+        Cara membuat akun baru :
+        1. Pada tampilan awal, pilih registrasi
+        2. Masukkan username dan password baru
+        3. Akun berhasil dibuat
+        ''')
+    elif pilihan == 4:
+        print("Pada aplikasi farmpro.mart telah disediakan fitur masukan untuk pengguna menyampaikan kritik dan saran tentang program aplikasi farmpro.mart")
+    elif pilihan == 5:
+        print('''
+        Anda dapat menghubungi cp yang tertera dibawah ini : 
+        +6281234567890
+        ''')
+    
+    elif pilihan == "tidak":
+        print("Terimakasih sudah mengunjungi pusat bantuan")
+        break
+    else:
+        print("Inputan tidak valid, silahkan pilih ya/tidak")
